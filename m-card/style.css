@@ -1,0 +1,14 @@
+body, html {
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: #eeeeee;
+  font-family: 'Nunito, sans-serif';
+}
+/*# sourceMappingURL=style.css.map */
