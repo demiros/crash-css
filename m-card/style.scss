@@ -1,12 +1,93 @@
-body, html {
-	margin: 0;
-	height: 100vh;
+// colors
+$color-primary: #e0e0e0;
+$color-dark: #282c34;
+$color-light: #fff;
+$color-light-blue: #60d9fa;
+$color-dark-grey: #757575;
+// card cpecifics variables
+$card-width: 275px;
+$card-header-height: 70px;
+$card-icon-color: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg)
+  brightness(82%) contrast(92%);
+$card-content-border: 1px solid #e0e0e0;
+$card-border-radius-top: 5px 5px 0px 0px;
+$card-border-radius-bottom: 0px 0px 5px 5px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100vh;
 }
 
 body {
-	display: grid;
-	place-content: center;
-	height: 100vh;
-	background: rgb(238, 238, 238);
-	font-family: 'Nunito, sans-serif';
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: rgb(238, 238, 238);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.card {
+  width: $card-width;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-dark;
+    height: $card-header-height;
+    color: $color-light-blue;
+    font-size: 1.5rem;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		padding-top: .5em;
+		padding-bottom: .5em;
+    background-color: $color-primary;
+
+    &__item {
+      filter: $card-icon-color;
+      width: 62px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    border: $card-content-border;
+    border-radius: 0px 0px 5px 5px;
+    font-size: 14px; ////CHECK
+    background-color: #fff;
+  }
+
+  &__list {
+    padding-left: 2.5rem;
+  }
+
+  //! separate the footer, not it is part of content!
+  &__footer {
+    align-self: flex-end;
+    padding-right: 0.5rem;
+  }
+
+  &__link--grey {
+    color: #999999;
+		text-decoration: none;
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
 }
