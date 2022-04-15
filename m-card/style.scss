@@ -12,7 +12,7 @@ $card-icon-color: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg)
 $card-content-border: 1px solid #e0e0e0;
 $card-border-radius-top: 5px 5px 0px 0px;
 $card-border-radius-bottom: 0px 0px 5px 5px;
-
+$card-border-radius: 5px 5px 5px 5px;
 *,
 *::before,
 *::after {
@@ -37,6 +37,9 @@ body {
 
 .card {
   width: $card-width;
+  border: $card-content-border;
+  border-radius: $card-border-radius;
+  background-color: #fff;
 
   &__header {
     display: flex;
@@ -46,15 +49,15 @@ body {
     height: $card-header-height;
     color: $color-light-blue;
     font-size: 1.5rem;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: $card-border-radius-top;
   }
 
   &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-		padding-top: .5em;
-		padding-bottom: .5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     background-color: $color-primary;
 
     &__item {
@@ -66,26 +69,23 @@ body {
   &__content {
     display: flex;
     flex-direction: column;
-    border: $card-content-border;
-    border-radius: 0px 0px 5px 5px;
-    font-size: 14px; ////CHECK
-    background-color: #fff;
+    font-size: 14px;
   }
 
   &__list {
     padding-left: 2.5rem;
   }
-	//test comment for fixing my github username
 
-  //! separate the footer, not it is part of content!
   &__footer {
-    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
     padding-right: 0.5rem;
+    font-size: 0.8em;
   }
 
   &__link--grey {
     color: #999999;
-		text-decoration: none;
+    text-decoration: none;
 
     &:hover {
       color: $color-dark;

@@ -24,6 +24,9 @@ body {
 
 .card {
   width: 275px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #fff;
 }
 
 .card__header {
@@ -53,8 +56,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   background-color: #e0e0e0;
 }
 
@@ -72,10 +75,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid #e0e0e0;
-  border-radius: 0px 0px 5px 5px;
   font-size: 14px;
-  background-color: #fff;
 }
 
 .card__list {
@@ -83,9 +83,14 @@ body {
 }
 
 .card__footer {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-right: 0.5rem;
+  font-size: 0.8em;
 }
 
 .card__link--grey {
