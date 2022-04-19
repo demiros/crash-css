@@ -19,14 +19,11 @@ body {
   text-align: left;
   border-collapse: collapse;
   border-spacing: 2px;
+  margin-bottom: 1rem;
 }
 
 .table tr {
   border-top: 1px solid #dee2e6;
-}
-
-.table thead th {
-  border-bottom: 2px solid #dee2e6;
 }
 
 .table td, .table th {
@@ -36,5 +33,22 @@ body {
 
 .table th {
   font-weight: bold;
+}
+
+.table thead th {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table-dark {
+  background-color: #212529;
+  color: white;
+}
+
+.table-dark tr {
+  border-top: 1px solid #32383e;
+}
+
+.table-dark thead th {
+  border-bottom: 2px solid #32383e;
 }
 /*# sourceMappingURL=style.css.map */
