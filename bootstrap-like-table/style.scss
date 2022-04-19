@@ -1,13 +1,12 @@
+// Variables //
+
 $--dark: #212529;
 $--dark-gray: #32383e;
-
+$--table-dark-gray: rgba(255,255,255,.05);
 $--gray: #dee2e6;
+$--light-gray: #e9ecef;
+$--light-gray-opac: rgba(0, 0, 0, 0.05);
 
-$--breakpoint-xs: 0;
-$--breakpoint-sm: 576px;
-$--breakpoint-md: 768px;
-$--breakpoint-lg: 992px;
-$--breakpoint-xl: 1200px;
 
 *,
 *::before,
@@ -26,41 +25,63 @@ body {
 }
 
 .table {
-	width: 100%;
-	text-align: left;
-	border-collapse: collapse;
-	border-spacing: 2px;
-	margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  margin-bottom: 1rem;
 
-	tr {
-		border-top: 1px solid $--gray;
+  tr {
+    border-top: 1px solid $--gray;
+  }
+
+  td,
+  th {
+    padding: 0.75rem;
+    display: table-cell;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  thead th {
+    border-bottom: 2px solid $--gray;
+  }
+
+  .thead--light {
+    background-color: $--light-gray;
+  }
+
+  .thead--dark {
+    background-color: $--dark-gray;
+    color: white;
+  }
+
+  &--striped > tbody {
+    tr:nth-child(odd) {
+      background-color: $--light-gray-opac;
+    }
+  }
+
+	&.table--dark {
+		background-color: $--dark;
+		color: white;
+	
+		tr {
+			border-top: 1px solid $--dark-gray;
+		}
+	
+		thead th {
+			border-bottom: 2px solid $--dark-gray;
+		}
+	
+		&.table--striped {
+			tbody tr:nth-of-type(odd) {
+				background-color: $--table-dark-gray;
+			}
+		}
 	}
-
-	td, th {
-		padding: 0.75rem;
-		display: table-cell;
-	}
-
-	th {
-		font-weight: bold;	
-	}
-
-	thead th {
-		border-bottom: 2px solid $--gray;
-	}	
-}
-
-.table-dark {
-	background-color: $--dark;
-	color: white;
-
-	tr {
-		border-top: 1px solid $--dark-gray;
-	}
-
-	thead th {
-		border-bottom: 2px solid $--dark-gray;
-	}	
 }
 
 

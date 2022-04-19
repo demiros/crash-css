@@ -8,9 +8,22 @@
     <title>Simple Table Materialize way</title>
   </head>
   <body>
-		<!-- <p>Hello</p> -->
-    <table class="table table-dark">
-      <thead>
+		<!-- 
+
+			A bit more BEM style here. 
+			.table is explicitly required.
+			
+			Classes for .table:
+			table--dark
+			table--striped
+
+			Classes for thead:
+			thead--light
+			thead--dark
+
+		 -->
+    <table class="table table--striped">
+      <thead class=""> 
         <tr>
           <th scope="col">#</th>
           <th scope="col">First</th>
@@ -21,21 +34,33 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Marco</td>
+          <td>Polo</td>
+          <td>@handler</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
+        </tr>
+				<tr>
+          <th scope="row">4</th>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
+        </tr>
+				<tr>
+          <th scope="row">5</th>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
         </tr>
       </tbody>
     </table>
