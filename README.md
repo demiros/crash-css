@@ -15,3 +15,10 @@ Demo: [https://crash-css.onrender.com/m-card/index.html](https://crash-css.onren
 Top navigation bar, inspired by Kevin Powell(check in YouTube, great tutorials).
 
 Demo: [https://crash-css.onrender.com/top-nav-responsive/index.html](https://crash-css.onrender.com/top-nav-responsive/index.html)
+<br><br>
+## bootstrap-like-table
+Fun coding of html table from the bootstrap official doc. I wanted to check if this table could be styled easily as it looks like to be. Confirmed.
+
+Demo: [https://crash-css.onrender.com/bootstrap-like-table/index.html](https://crash-css.onrender.com/bootstrap-like-table/index.html)
+<br><br>
+
