@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css">
+    <title>Simple Table Materialize way</title>
+  </head>
+  <body>
+		<!-- 
+
+			A bit more BEM style here. 
+			.table is explicitly required.
+			
+			Classes for .table:
+			table--dark
+			table--striped
+
+			Classes for thead:
+			thead--light
+			thead--dark
+
+		 -->
+    <table class="table table--striped">
+      <thead class=""> 
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Marco</td>
+          <td>Polo</td>
+          <td>@handler</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
+        </tr>
+				<tr>
+          <th scope="row">4</th>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
+        </tr>
+				<tr>
+          <th scope="row">5</th>
+          <td>Lorem</td>
+          <td>Ipsum</td>
+          <td>@handler</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
