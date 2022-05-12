@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+.chat-list {
+  list-style-type: none;
+}
+/*# sourceMappingURL=style.css.map */
