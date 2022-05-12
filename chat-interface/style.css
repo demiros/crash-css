@@ -12,7 +12,105 @@ body {
   font-weight: 400;
 }
 
+.chat-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  margin: 0px 15px 0px 15px;
+}
+
+.chat-container input {
+  min-height: 1.75rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-left: .75em;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+.chat-container input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.chat-container input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.chat-container input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.chat-container input:focus::placeholder {
+  color: transparent;
+}
+
+.chat-container input:focus {
+  border: 1px solid #999999;
+}
+
 .chat-list {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+
+.chat-list__item {
+  margin-bottom: .6em;
+}
+
+.chat-list__item p {
+  margin: 0;
+  margin-bottom: .2em;
+}
+
+.chat-list__item:hover {
+  background-color: #f3f3f3;
+}
+
+.chat-list__user {
+  font-size: .95em;
+}
+
+.chat-list__user--active {
+  display: inline-block;
+  margin-left: 0.4em;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.chat-list__user--inactive {
+  display: inline-block;
+  margin-left: 0.4em;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.chat-list__user::after {
+  content: attr(data-message-date);
+  margin-left: 0.4em;
+  color: #ccc;
 }
 /*# sourceMappingURL=style.css.map */

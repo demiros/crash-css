@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
+$margin-inside: .4em;
+
 *,
 *::before,
 *::after {
@@ -12,9 +14,85 @@ body {
   font-weight: 400;
 }
 
+.chat-container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	margin: 0px 15px 0px 15px;
+	// background-color: #ccc;
+
+	input {
+		// width: 100%;
+		min-height: 1.75rem;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		outline: none;
+		transition: 0.5s;
+		padding-left: .75em;
+		position: sticky;
+		bottom: 0;
+		
+		&:focus::placeholder {
+			color: transparent;
+		}
+
+		&:focus {
+			border: 1px solid rgb(153, 153, 153);
+		}
+	}
+}
+
 
 .chat-list {
-		list-style-type: none;
-
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;	
+  padding: 0;	
 	
+		&__item {
+			margin-bottom: .6em;
+
+			p {
+				margin: 0;
+				margin-bottom: .2em;
+				
+			}
+
+			&:hover{
+				background-color: rgb(243, 243, 243);
+			}
+		}
+
+		&__user {
+			font-size: .95em;
+
+			&--active {
+				display: inline-block;
+				margin-left: $margin-inside;
+				width: 10px;
+				height: 10px;
+				background-color: green;
+				border-radius: 50%;
+			}	
+			&--inactive {
+				display: inline-block;
+				margin-left: $margin-inside;
+				width: 10px;
+				height: 10px;
+				background-color: #ccc;
+				border-radius: 50%;
+			}	
+		}
+
+		&__user::after {
+			content: attr(data-message-date);
+			margin-left: $margin-inside;
+			color: #ccc;
+		}
+
+		&__message {
+			
+		}
 }
