@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
 $margin-inside: .4em;
+$clr-usr-status-active: green;
+$clr-usr-status-inactive: #ccc;
 
 *,
 *::before,
@@ -21,7 +23,6 @@ body {
 	justify-content: space-between;
 	height: 100%;
 	margin: 0px 15px 0px 15px;
-	// background-color: #ccc;
 
 	input {
 		// width: 100%;
@@ -44,7 +45,6 @@ body {
 	}
 }
 
-
 .chat-list {
 	list-style-type: none;
 	display: flex;
@@ -56,12 +56,18 @@ body {
 
 			p {
 				margin: 0;
-				margin-bottom: .2em;
-				
+				margin-bottom: .2em;	
 			}
 
 			&:hover{
 				background-color: rgb(243, 243, 243);
+
+				//`li` on hover:
+				.chat-list__user::after {
+					content: attr(data-message-date);
+					margin-left: $margin-inside;
+					color: #ccc;
+				}
 			}
 		}
 
@@ -73,7 +79,7 @@ body {
 				margin-left: $margin-inside;
 				width: 10px;
 				height: 10px;
-				background-color: green;
+				background-color: $clr-usr-status-active;
 				border-radius: 50%;
 			}	
 			&--inactive {
@@ -81,18 +87,8 @@ body {
 				margin-left: $margin-inside;
 				width: 10px;
 				height: 10px;
-				background-color: #ccc;
+				background-color: $clr-usr-status-inactive
 				border-radius: 50%;
 			}	
-		}
-
-		&__user::after {
-			content: attr(data-message-date);
-			margin-left: $margin-inside;
-			color: #ccc;
-		}
-
-		&__message {
-			
 		}
 }
