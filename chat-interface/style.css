@@ -13,6 +13,7 @@ body {
 }
 
 .chat-container {
+  background-color: white;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,6 +25,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 500px;
   height: 100%;
   margin: 0px 15px 0px 15px;
 }
@@ -61,6 +63,10 @@ body {
   border: 1px solid #999999;
 }
 
+.chat-header__room-info {
+  background-color: #ccc;
+}
+
 .chat-list {
   list-style-type: none;
   display: -webkit-box;
@@ -71,6 +77,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .chat-list__item {
@@ -135,8 +143,8 @@ nav {
   overflow-y: scroll;
   padding: 20px;
   -webkit-overflow-scrolling: touch;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 nav ul {
@@ -147,7 +155,7 @@ nav ul {
 
 nav li {
   margin-bottom: 5px;
-  padding-left: .3em;
+  padding-left: 0.3em;
   height: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,28 +212,8 @@ nav a:hover {
           align-items: center;
 }
 
-.nav-toggle__label span,
-.nav-toggle__label span::before,
-.nav-toggle__label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle__label span::before,
-.nav-toggle__label span::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle__label span::before {
-  bottom: 7px;
-}
-
-.nav-toggle__label span::after {
-  top: 7px;
+.nav-toggle__label .chat-icon {
+  width: 42px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
