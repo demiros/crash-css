@@ -35,7 +35,7 @@ body {
   outline: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-left: .75em;
+  padding-left: 0.75em;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
@@ -74,12 +74,12 @@ body {
 }
 
 .chat-list__item {
-  margin-bottom: .6em;
+  margin-bottom: 0.6em;
 }
 
 .chat-list__item p {
   margin: 0;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 .chat-list__item:hover {
@@ -93,7 +93,7 @@ body {
 }
 
 .chat-list__user {
-  font-size: .95em;
+  font-size: 0.95em;
 }
 
 .chat-list__user--active {
@@ -112,5 +112,120 @@ body {
   height: 10px;
   background-color: #ccc;
   border-radius: 50%;
+}
+
+header {
+  background: rgba(255, 125, 97, 0.86);
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
+  width: 100%;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  max-height: 100vh;
+  top: 100%;
+  left: -110%;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 5px;
+  padding-left: .3em;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav li:hover {
+  background-color: #f3f3f3;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  left: 0;
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease-in-out 150ms;
+  transition: opacity 150ms ease-in-out 150ms;
+}
+
+.nav-toggle__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-toggle__label span,
+.nav-toggle__label span::before,
+.nav-toggle__label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle__label span::before,
+.nav-toggle__label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle__label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle__label span::after {
+  top: 7px;
 }
 /*# sourceMappingURL=style.css.map */

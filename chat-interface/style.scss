@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
-$margin-inside: .4em;
+$margin-inside: 0.4em;
 $clr-usr-status-active: green;
 $clr-usr-status-inactive: #ccc;
+$clr-hover: rgb(243, 243, 243);
 
 *,
 *::before,
@@ -17,78 +18,182 @@ body {
 }
 
 .chat-container {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-	margin: 0px 15px 0px 15px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0px 15px 0px 15px;
 
-	input {
-		// width: 100%;
-		min-height: 1.75rem;
-		border: 1px solid #ccc;
-		border-radius: 3px;
-		outline: none;
-		transition: 0.5s;
-		padding-left: .75em;
-		position: sticky;
-		bottom: 0;
-		
-		&:focus::placeholder {
-			color: transparent;
-		}
+  input {
+    min-height: 1.75rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    transition: 0.5s;
+    padding-left: 0.75em;
+    position: sticky;
+    bottom: 0;
 
-		&:focus {
-			border: 1px solid rgb(153, 153, 153);
-		}
-	}
+    &:focus::placeholder {
+      color: transparent;
+    }
+
+    &:focus {
+      border: 1px solid rgb(153, 153, 153);
+    }
+  }
 }
 
 .chat-list {
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;	
-  padding: 0;	
-	
-		&__item {
-			margin-bottom: .6em;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 
-			p {
-				margin: 0;
-				margin-bottom: .2em;	
-			}
+  &__item {
+    margin-bottom: 0.6em;
 
-			&:hover{
-				background-color: rgb(243, 243, 243);
+    p {
+      margin: 0;
+      margin-bottom: 0.2em;
+    }
 
-				//`li` on hover:
-				.chat-list__user::after {
-					content: attr(data-message-date);
-					margin-left: $margin-inside;
-					color: #ccc;
-				}
-			}
-		}
+    &:hover {
+      background-color: $clr-hover;
 
-		&__user {
-			font-size: .95em;
+      //`li` on hover:
+      .chat-list__user::after {
+        content: attr(data-message-date);
+        margin-left: $margin-inside;
+        color: #ccc;
+      }
+    }
+  }
 
-			&--active {
-				display: inline-block;
-				margin-left: $margin-inside;
-				width: 10px;
-				height: 10px;
-				background-color: $clr-usr-status-active;
-				border-radius: 50%;
-			}	
-			&--inactive {
-				display: inline-block;
-				margin-left: $margin-inside;
-				width: 10px;
-				height: 10px;
-				background-color: $clr-usr-status-inactive
-				border-radius: 50%;
-			}	
-		}
+  &__user {
+    font-size: 0.95em;
+
+    &--active {
+      display: inline-block;
+      margin-left: $margin-inside;
+      width: 10px;
+      height: 10px;
+      background-color: $clr-usr-status-active;
+      border-radius: 50%;
+    }
+    &--inactive {
+      display: inline-block;
+      margin-left: $margin-inside;
+      width: 10px;
+      height: 10px;
+      background-color: $clr-usr-status-inactive;
+      border-radius: 50%;
+    }
+  }
+}
+
+$background-color: rgba(255, 125, 97, 0.86);
+
+header {
+  background: $background-color;
+  text-align: center;
+  position: sticky;
+  z-index: 999;
+  width: 100%;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+	width: 100%;
+	max-height: 100vh;
+  top: 100%;
+  left: -110%;
+  background: white;
+	overflow-x: hidden; 
+	overflow-y: scroll;
+	padding: 20px;
+	-webkit-overflow-scrolling: touch;
+  // transform: scale(1, 0);
+	transition: all .2s ease;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+		margin-bottom: 5px;
+		padding-left: .3em;
+		height: 2em;
+		display: flex;
+		align-items: center;
+  }
+
+	li:hover {
+		background-color: $clr-hover;
+	}
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  a:hover {
+    color: #000;
+  }
+}
+
+.nav-toggle {
+  display: none;
+
+  // note: ~ is looking for a sibling.
+  &:checked ~ nav {
+    transform: scale(1, 1);
+		left: 0;
+
+    a {
+      opacity: 1;
+      transition: opacity 150ms ease-in-out 150ms;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__label span,
+  &__label span::before,
+  &__label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  &__label span::before,
+  &__label span::after {
+    content: '';
+    position: absolute;
+  }
+
+  &__label span::before {
+    bottom: 7px;
+  }
+
+  &__label span::after {
+    top: 7px;
+  }
 }
