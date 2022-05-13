@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500');
 
 $margin-inside: 0.4em;
 $clr-usr-status-active: green;
 $clr-usr-status-inactive: #ccc;
 $clr-hover: rgb(243, 243, 243);
 $clr-nav-icon: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg)
-  brightness(82%) contrast(92%);
+  brightness(52%) contrast(92%);
 $clr-bg-header: rgba(255, 125, 97, 0.86);
 
 *,
@@ -15,10 +15,10 @@ $clr-bg-header: rgba(255, 125, 97, 0.86);
 }
 
 body {
+	background-color: black;
   margin: 0;
   font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-	// background-color: #ccc;
+  font-weight: 300;
 }
 
 .chat-container {
@@ -29,7 +29,7 @@ body {
   justify-content: space-between;
 	width: 500px;
   height: 100%;
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 0px 150px;
 
   input {
     min-height: 1.75rem;
@@ -51,15 +51,12 @@ body {
   }
 }
 
-.chat-header__room-info {
-	background-color: #ccc;
-}
-
 .chat-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   padding: 0;
+	padding-left: 5px;
 	overflow-x: hidden;
   overflow-y: scroll;
 
@@ -105,15 +102,67 @@ body {
   }
 }
 
-header {
-  background: $clr-bg-header;
-  text-align: center;
+.chat-header {
+	border: 1px solid $clr-bg-header;
   position: sticky;
   z-index: 999;
   width: 100%;
+	height: 4.2em;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.header-elem span {
+	display: block;
+	text-align: center;
+
+	&:last-child {
+		// margin-top: 4px;
+		font-size: 1.2em;
+		letter-spacing: 0.1em;
+		font-weight: 500;
+	}
+}
+
+
+.nav-toggle {
+  display: none;
+
+  // note: ~ is looking for a sibling.
+  &:checked ~ nav {
+    transform: scale(1, 1);
+    left: 0;
+		// display: block;
+
+    a {
+      opacity: 1;
+      transition: opacity 150ms ease-in-out 150ms;
+    }
+  }
+}
+
+.chat-icon__users {
+	width: 42px;
+	cursor: pointer;
+	filter: $clr-nav-icon;
+}
+
+.chat-icon__rooms {
+	width: 42px;
+	filter: $clr-nav-icon;
+	margin-right: 4px;
+}
+
+
+.chat-header__room-info {
+	background-color: #ccc;
 }
 
 nav {
+	// display: none;
   position: absolute;
   text-align: left;
   width: 100%;
@@ -125,8 +174,8 @@ nav {
   overflow-y: scroll;
   padding: 20px;
   -webkit-overflow-scrolling: touch;
-  // transform: scale(1, 0);
   transition: all 0.2s ease;
+	
 
   ul {
     margin: 0;
@@ -158,33 +207,6 @@ nav {
   }
 }
 
-.nav-toggle {
-  display: none;
 
-  // note: ~ is looking for a sibling.
-  &:checked ~ nav {
-    transform: scale(1, 1);
-    left: 0;
 
-    a {
-      opacity: 1;
-      transition: opacity 150ms ease-in-out 150ms;
-    }
-  }
 
-  &__label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 1em;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-		.chat-icon {
-			width: 42px;
-			cursor: pointer;
-			// filter: $clr-nav-icon;
-		}
-  }
-}

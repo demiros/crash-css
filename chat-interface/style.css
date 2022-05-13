@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500");
 *,
 *::before,
 *::after {
@@ -7,9 +7,10 @@
 }
 
 body {
+  background-color: black;
   margin: 0;
   font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .chat-container {
@@ -27,7 +28,7 @@ body {
           justify-content: space-between;
   width: 500px;
   height: 100%;
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 0px 150px;
 }
 
 .chat-container input {
@@ -63,10 +64,6 @@ body {
   border: 1px solid #999999;
 }
 
-.chat-header__room-info {
-  background-color: #ccc;
-}
-
 .chat-list {
   list-style-type: none;
   display: -webkit-box;
@@ -77,6 +74,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
+  padding-left: 5px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -122,13 +120,67 @@ body {
   border-radius: 50%;
 }
 
-header {
-  background: rgba(255, 125, 97, 0.86);
-  text-align: center;
+.chat-header {
+  border: 1px solid rgba(255, 125, 97, 0.86);
   position: -webkit-sticky;
   position: sticky;
   z-index: 999;
   width: 100%;
+  height: 4.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-elem span {
+  display: block;
+  text-align: center;
+}
+
+.header-elem span:last-child {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  left: 0;
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease-in-out 150ms;
+  transition: opacity 150ms ease-in-out 150ms;
+}
+
+.chat-icon__users {
+  width: 42px;
+  cursor: pointer;
+  -webkit-filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+          filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+}
+
+.chat-icon__rooms {
+  width: 42px;
+  -webkit-filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+          filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+  margin-right: 4px;
+}
+
+.chat-header__room-info {
+  background-color: #ccc;
 }
 
 nav {
@@ -180,40 +232,5 @@ nav a {
 
 nav a:hover {
   color: #000;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle:checked ~ nav {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-  left: 0;
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  -webkit-transition: opacity 150ms ease-in-out 150ms;
-  transition: opacity 150ms ease-in-out 150ms;
-}
-
-.nav-toggle__label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav-toggle__label .chat-icon {
-  width: 42px;
-  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
