@@ -4,7 +4,6 @@ const users = [
 	// 	"username": "Ivan"
 	// },
 
-
 	{
 		"id": '42491332f3f278b69308b30eb34e0e2f',
 		"username": "Demiro"
@@ -21,136 +20,10 @@ const users = [
 		"id": '931c251e3f204bec77b88bcc33a570d0',
 		"username": "nbd"
 	},
-	
-	
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-
-
-
-
-
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-	// {
-	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
-	// 	"username": "SampleBoy"
-	// },
-
-
-
+	{
+		"id": '931c251e3f204bec77b88bcc33a570d0',
+		"username": "SampleBoy"
+	},
 	{
 		"id": '931c251e3f204bec77b88bcc33a570d0',
 		"username": "ENDBOY"
@@ -338,7 +211,7 @@ function handleMsgInputSend(e) {
 		}
 
 		messages.push(messageToSubmit)
-		document.querySelector(".chat-list").remove()
+		document.querySelector(".chat-messages-list").remove()
 		return displayChatMessages(messages)
 	}
 }
@@ -346,12 +219,11 @@ function handleMsgInputSend(e) {
 function displayChatMessages(messages) {
 	const metaData = {
 		cssClasses: {
-			list: "chat-list",
-			listItem: "chat-list__item",
-			listUser: "chat-list__user",
-			listUserStatusActive: "chat-list__user--active",
-			listUserStatusInactive: "chat-list__user--inactive",
-			listMsg: "chat-list__message"
+			list: "chat-messages-list",
+			listUser: "chat-messages-list__user",
+			listUserStatusActive: "chat-messages-list__user--active",
+			listUserStatusInactive: "chat-messages-list__user--inactive",
+			listMsg: "chat-messages-list__message"
 		}
 	}
 
@@ -363,7 +235,7 @@ function displayChatMessages(messages) {
 		const statusClass = isActiveStatus ? metaData.cssClasses.listUserStatusActive : metaData.cssClasses.listUserStatusInactive
 		const { date, user, message } = e
 		return `
-			<li class=${metaData.cssClasses.listItem}> 
+			<li> 
 				<p class=${metaData.cssClasses.listUser} data-message-date="${new Date(parseInt(date)).toLocaleString()}">${user}<span class=${statusClass}></span></p>
 				<p class=${metaData.cssClasses.listMsg}>${message}</p>
 			</li>
@@ -386,13 +258,15 @@ function displayChatInput(room) {
 function displayChatHeaderNav(room) {
 	const metaData = {
 		cssClasses: {
-			flex: "header-elem", // TODO change on refactor
+			headerItem: "chat-header__item", // TODO change on refactor
 			navToggle: "nav-toggle",
 			navToggleLabel: "nav-toggle__label",
-			navIcon: "chat-icon__users"
+			navDrawerLeft: "chat-header__nav--left",
+			navIconUsers: "chat-header__icon--users",
+			navIconRooms: "chat-header__icon--rooms"
 		},
-		iconPath: "chat-users-icon.svg",
-		iconAlt: "Online Users"
+		iconPathUsers: "chat-users-icon.svg",
+		iconAltUsers: "Online Users"
 	}
 
 	const displayUsersNav = () => {
@@ -401,19 +275,19 @@ function displayChatHeaderNav(room) {
 		}).join("")
 
 		return `
-			<div class=${metaData.cssClasses.flex}>
+			<div class=${metaData.cssClasses.headerItem}>
 				
 				<input type="checkbox" class=${metaData.cssClasses.navToggle} id=${metaData.cssClasses.navToggle} />
 				<label for=${metaData.cssClasses.navToggle} class=${metaData.cssClasses.navToggleLabel}>
 					<img
-						class=${metaData.cssClasses.navIcon}
-						src=${metaData.iconPath}
-						alt= ${metaData.iconAlt}
+						class=${metaData.cssClasses.navIconUsers}
+						src=${metaData.iconPathUsers}
+						alt= ${metaData.iconAltUsers}
 					/>
 				</label>
 
-				<nav>
-					<p>${metaData.iconAlt}:</p>
+				<nav class=${metaData.cssClasses.navDrawerLeft}>
+					<p>${metaData.iconAltUsers}:</p>
 					<ul>
 						${userList}
 					</ul>
@@ -425,7 +299,7 @@ function displayChatHeaderNav(room) {
 
 	const displayRoomInfo = (room) => {
 		return `
-			<div class=${metaData.cssClasses.flex}>
+			<div class=${metaData.cssClasses.headerItem}>
 				<span>Room:</span>
 				<span>${room}</span>
       </div>
@@ -435,9 +309,9 @@ function displayChatHeaderNav(room) {
 	const displayRoomsNav = () => {
 		//TODO everything
 		return `
-			<div class=${metaData.cssClasses.flex}>
+			<div class=${metaData.cssClasses.headerItem}>
 				<img
-					class="chat-icon__rooms"
+					class=${metaData.cssClasses.navIconRooms}
 					src="chat-svgrepo-com.svg"
 					alt="Room lists"
 				/>
@@ -445,13 +319,13 @@ function displayChatHeaderNav(room) {
 		`
 	}
 
-	// TODO add render function and assure the sync exec
+	// TODO add render function
 	chatHeaderContainer.insertAdjacentHTML("afterbegin", displayRoomsNav())
 	chatHeaderContainer.insertAdjacentHTML("afterbegin", displayRoomInfo(room))
 	chatHeaderContainer.insertAdjacentHTML("afterbegin", displayUsersNav())
 }
 
-// Ideas to remember: 
+// *** Ideas to remember: 
 // *) we can omit username above message if the prev msg user is the same, and if the message is sent within last 10 min. 
 // *) for better IRC experience we can wrap(style) user in <> and remove dates on hover. 
 // *) edit feature. 
