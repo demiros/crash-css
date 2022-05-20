@@ -223,7 +223,6 @@ function displayChatMessages(messages) {
 			listUser: "chat-messages-list__user",
 			listUserStatusActive: "chat-messages-list__user--active",
 			listUserStatusInactive: "chat-messages-list__user--inactive",
-			listMsg: "chat-messages-list__message"
 		}
 	}
 
@@ -237,7 +236,7 @@ function displayChatMessages(messages) {
 		return `
 			<li> 
 				<p class=${metaData.cssClasses.listUser} data-message-date="${new Date(parseInt(date)).toLocaleString()}">${user}<span class=${statusClass}></span></p>
-				<p class=${metaData.cssClasses.listMsg}>${message}</p>
+				<p>${message}</p>
 			</li>
 		`
 	}).join("")

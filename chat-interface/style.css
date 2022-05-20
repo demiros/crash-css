@@ -35,7 +35,6 @@ body {
   min-width: 100%;
   min-height: 1.75rem;
   border: 1px solid #ccc;
-  border-radius: 3px;
   outline: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -82,7 +81,7 @@ body {
 
 .chat-messages-list {
   list-style-type: none;
-  padding-left: 0.75em;
+  padding: 0;
 }
 
 .chat-messages-list li {
@@ -90,6 +89,7 @@ body {
 }
 
 .chat-messages-list li p {
+  padding-left: 0.75em;
   margin: 0;
   margin-bottom: 0.2em;
 }
@@ -102,7 +102,7 @@ body {
   background-color: #f3f3f3;
 }
 
-.chat-messages-list li:hover .chat-list__user::after {
+.chat-messages-list li:hover .chat-messages-list__user::after {
   content: attr(data-message-date);
   margin-left: 0.4em;
   color: #ccc;

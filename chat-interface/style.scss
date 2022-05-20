@@ -37,7 +37,6 @@ body {
     min-width: 100%;
     min-height: 1.75rem;
     border: 1px solid #ccc;
-    border-radius: 3px;
     outline: none;
     transition: 0.5s;
     padding-left: 0.75em;
@@ -61,17 +60,18 @@ body {
   overflow-y: scroll;
   // column-reverse here for the default scroll-down
   flex-direction: column-reverse;
-
 }
 
 .chat-messages-list {
   list-style-type: none;
-  padding-left: 0.75em;
+	padding: 0;
+	
 
   li {
     margin-bottom: 0.6em;
 
     p {
+			padding-left: 0.75em;
       margin: 0;
       margin-bottom: 0.2em;
     }
@@ -83,7 +83,7 @@ body {
     &:hover {
       background-color: $clr-hover;
 
-      .chat-list__user::after {
+      .chat-messages-list__user::after {
         content: attr(data-message-date);
         margin-left: $margin-inside;
         color: #ccc;
@@ -148,7 +148,7 @@ body {
     margin-right: 4px;
   }
 
-	//* Drawer
+  //* Drawer
   &__nav--left {
     position: absolute;
     left: -100%;
