@@ -19,19 +19,25 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
+	overflow: hidden;
 }
+
+
 
 .chat-container {
 	background-color: white;
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+	justify-content: space-between;
 	width: 500px;
   height: 100%;
-  margin: 0px 15px 0px 150px;
+}
 
-  input {
+.chat-input {
+
+	input {
+		min-width: 100%;
     min-height: 1.75rem;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -51,27 +57,37 @@ body {
   }
 }
 
-.chat-list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-	padding-left: 5px;
+.chat-messages {
+	flex-grow: 1;
+	display: flex;
 	overflow-x: hidden;
   overflow-y: scroll;
+	// column-reverse in order to scroll-down by default, keep in mind this reverses the content.
+	flex-direction: column-reverse;
+}
 
+.chat-list {
+  list-style-type: none;
+	padding-left: 0.75em;
+	
+	
   &__item {
     margin-bottom: 0.6em;
+		
+		// remove padding-bottom of the last child. First due to the column-reverse
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 
     p {
       margin: 0;
       margin-bottom: 0.2em;
     }
 
+		//`li` on hover:
     &:hover {
       background-color: $clr-hover;
 
-      //`li` on hover:
       .chat-list__user::after {
         content: attr(data-message-date);
         margin-left: $margin-inside;
@@ -103,16 +119,14 @@ body {
 }
 
 .chat-header {
-	border: 1px solid $clr-bg-header;
+	border-bottom: 1px solid $clr-bg-header;
   position: sticky;
   z-index: 999;
   width: 100%;
 	height: 4.2em;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 }
 
 .header-elem span {
@@ -120,28 +134,10 @@ body {
 	text-align: center;
 
 	&:last-child {
-		// margin-top: 4px;
 		font-size: 1.2em;
 		letter-spacing: 0.1em;
 		font-weight: 500;
 	}
-}
-
-
-.nav-toggle {
-  display: none;
-
-  // note: ~ is looking for a sibling.
-  &:checked ~ nav {
-    transform: scale(1, 1);
-    left: 0;
-		// display: block;
-
-    a {
-      opacity: 1;
-      transition: opacity 150ms ease-in-out 150ms;
-    }
-  }
 }
 
 .chat-icon__users {
@@ -156,39 +152,49 @@ body {
 	margin-right: 4px;
 }
 
+.nav-toggle {
+  display: none;
 
-.chat-header__room-info {
-	background-color: #ccc;
+  // note: ~ is looking for a sibling.
+  &:checked ~ nav {
+    // transform: scale(0.5, 0.5);
+		transform: scale(1, 1);
+    left: 0;
+
+    a {
+      opacity: 1;
+      transition: opacity 150ms ease-in-out 150ms;
+    }
+  }
 }
 
 nav {
-	// display: none;
   position: absolute;
+	padding-left: 20px;
+	padding-block-end: 50px;
+	left: -100%;
+	
   text-align: left;
   width: 100%;
   max-height: 100vh;
-  top: 100%;
-  left: -110%;
+  
   background: white;
   overflow-x: hidden;
-  overflow-y: scroll;
-  padding: 20px;
+  overflow-y: auto;
+  
   -webkit-overflow-scrolling: touch;
   transition: all 0.2s ease;
+	border-bottom: 1px solid black;
+	box-shadow: 0px 10px 6px -7px rgba(0, 0, 0, 0.5);
 	
-
   ul {
-    margin: 0;
+    margin-bottom: 0;
     padding: 0;
     list-style: none;
   }
 
   li {
-    margin-bottom: 5px;
-    padding-left: 0.3em;
-    height: 2em;
-    display: flex;
-    align-items: center;
+    padding: 7px;
   }
 
   li:hover {
@@ -206,7 +212,4 @@ nav {
     color: #000;
   }
 }
-
-
-
 

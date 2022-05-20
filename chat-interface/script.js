@@ -1,0 +1,458 @@
+const users = [
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "Ivan"
+	// },
+
+
+	{
+		"id": '42491332f3f278b69308b30eb34e0e2f',
+		"username": "Demiro"
+	},
+	{
+		"id": '931c251e3f204bec77b88bcc33a570d0',
+		"username": "SampleBoy"
+	},
+	{
+		"id": '931c251e3f204bec77b88bcc33a570d0',
+		"username": "hldd3n"
+	},
+	{
+		"id": '931c251e3f204bec77b88bcc33a570d0',
+		"username": "nbd"
+	},
+	
+	
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+
+
+
+
+
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+	// {
+	// 	"id": '931c251e3f204bec77b88bcc33a570d0',
+	// 	"username": "SampleBoy"
+	// },
+
+
+
+	{
+		"id": '931c251e3f204bec77b88bcc33a570d0',
+		"username": "ENDBOY"
+	},
+]
+
+const messages = [
+	{
+		"id": "",
+		"date": "1652485480000",
+		"user": "Ivan",
+		"message": "chess1",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485481000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485482000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485483000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485484000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485485000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485486000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485487000",
+		"user": "Ivan",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652484982000",
+		"user": "Ivan",
+		"message": "Hello",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485053000",
+		"user": "Demiro",
+		"message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est totam unde harum quas voluptatibus eius sint quia ex voluptas eaque a quae, laudantium quibusdam, suscipit ipsam adipisci accusantium dolor?",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485251000",
+		"user": "Ivan",
+		"message": "Hey bro, how are you",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485316000",
+		"user": "Demiro",
+		"message": "chess",
+		"room": "lobby"
+	},
+	{
+		"id": "",
+		"date": "1652485336000",
+		"user": "Ivan",
+		"message": "Yeah",
+		"room": "lobby"
+	}
+]
+
+const userCleanArr = users.map(e => e.username)
+const chatHeaderContainer = document.querySelector(".chat-header")
+const chatMessagesContainer = document.querySelector(".chat-messages")
+const chatInputContainer = document.querySelector(".chat-input")
+const currentUser = "Demiro"
+const currentRoom = "Lobby"
+
+displayChatHeaderNav(currentRoom)
+displayChatInput(currentRoom)
+displayChatMessages(messages)
+
+const msgInputElement = document.querySelector("#msg-input")
+msgInputElement.addEventListener("keypress", (e) => handleMsgInputSend(e))
+
+
+function handleMsgInputSend(e) {
+	const inputText = msgInputElement.value
+
+	if (e.key === "Enter" && inputText !== "") {
+		e.preventDefault()
+		msgInputElement.value = ""
+
+		const messageToSubmit = {
+			"id": "",
+			"date": Date.now(),
+			"user": currentUser,
+			"message": inputText,
+			"room": currentRoom
+		}
+
+		messages.push(messageToSubmit)
+		document.querySelector(".chat-list").remove()
+		return displayChatMessages(messages)
+	}
+}
+
+function displayChatMessages(messages) {
+	const metaData = {
+		cssClasses: {
+			list: "chat-list",
+			listItem: "chat-list__item",
+			listUser: "chat-list__user",
+			listUserStatusActive: "chat-list__user--active",
+			listUserStatusInactive: "chat-list__user--inactive",
+			listMsg: "chat-list__message"
+		}
+	}
+
+	const list = document.createElement("ul")
+	list.className = metaData.cssClasses.list;
+
+	const messagesMap = messages.map(e => {
+		const isActiveStatus = userCleanArr.includes(e.user)
+		const statusClass = isActiveStatus ? metaData.cssClasses.listUserStatusActive : metaData.cssClasses.listUserStatusInactive
+		const { date, user, message } = e
+		return `
+			<li class=${metaData.cssClasses.listItem}> 
+				<p class=${metaData.cssClasses.listUser} data-message-date="${new Date(parseInt(date)).toLocaleString()}">${user}<span class=${statusClass}></span></p>
+				<p class=${metaData.cssClasses.listMsg}>${message}</p>
+			</li>
+		`
+	}).join("")
+	list.insertAdjacentHTML("afterbegin", messagesMap)
+
+	return chatMessagesContainer.append(list)
+}
+
+function displayChatInput(room) {
+	// TODO add send button, or do not, we all loved mIRC :)
+	const input = document.createElement("input")
+	input.setAttribute("type", "text");
+	input.setAttribute("placeholder", `Message ${room}`)
+	input.setAttribute("id", "msg-input");
+	return chatInputContainer.append(input)
+}
+
+function displayChatHeaderNav(room) {
+	const metaData = {
+		cssClasses: {
+			flex: "header-elem", // TODO change on refactor
+			navToggle: "nav-toggle",
+			navToggleLabel: "nav-toggle__label",
+			navIcon: "chat-icon__users"
+		},
+		iconPath: "chat-users-icon.svg",
+		iconAlt: "Online Users"
+	}
+
+	const displayUsersNav = () => {
+		const userList = users.map(userObj => {
+			return `<li><a href="#">${userObj.username}</a></li>`
+		}).join("")
+
+		return `
+			<div class=${metaData.cssClasses.flex}>
+				
+				<input type="checkbox" class=${metaData.cssClasses.navToggle} id=${metaData.cssClasses.navToggle} />
+				<label for=${metaData.cssClasses.navToggle} class=${metaData.cssClasses.navToggleLabel}>
+					<img
+						class=${metaData.cssClasses.navIcon}
+						src=${metaData.iconPath}
+						alt= ${metaData.iconAlt}
+					/>
+				</label>
+
+				<nav>
+					<p>${metaData.iconAlt}:</p>
+					<ul>
+						${userList}
+					</ul>
+				</nav>
+
+			</div>
+		`
+	}
+
+	const displayRoomInfo = (room) => {
+		return `
+			<div class=${metaData.cssClasses.flex}>
+				<span>Room:</span>
+				<span>${room}</span>
+      </div>
+		`
+	}
+
+	const displayRoomsNav = () => {
+		//TODO everything
+		return `
+			<div class=${metaData.cssClasses.flex}>
+				<img
+					class="chat-icon__rooms"
+					src="chat-svgrepo-com.svg"
+					alt="Room lists"
+				/>
+			</div>
+		`
+	}
+
+	// TODO add render function and assure the sync exec
+	chatHeaderContainer.insertAdjacentHTML("afterbegin", displayRoomsNav())
+	chatHeaderContainer.insertAdjacentHTML("afterbegin", displayRoomInfo(room))
+	chatHeaderContainer.insertAdjacentHTML("afterbegin", displayUsersNav())
+}
+
+// Ideas to remember: 
+// *) we can omit username above message if the prev msg user is the same, and if the message is sent within last 10 min. 
+// *) for better IRC experience we can wrap(style) user in <> and remove dates on hover. 
+// *) edit feature. 
+// *) /command

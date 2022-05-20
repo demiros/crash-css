@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
+  overflow: hidden;
 }
 
 .chat-container {
@@ -28,10 +29,10 @@ body {
           justify-content: space-between;
   width: 500px;
   height: 100%;
-  margin: 0px 15px 0px 150px;
 }
 
-.chat-container input {
+.chat-input input {
+  min-width: 100%;
   min-height: 1.75rem;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -44,43 +45,52 @@ body {
   bottom: 0;
 }
 
-.chat-container input:focus::-webkit-input-placeholder {
+.chat-input input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.chat-container input:focus:-ms-input-placeholder {
+.chat-input input:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.chat-container input:focus::-ms-input-placeholder {
+.chat-input input:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-.chat-container input:focus::placeholder {
+.chat-input input:focus::placeholder {
   color: transparent;
 }
 
-.chat-container input:focus {
+.chat-input input:focus {
   border: 1px solid #999999;
+}
+
+.chat-messages {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .chat-list {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0;
-  padding-left: 5px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  padding-left: 0.75em;
 }
 
 .chat-list__item {
   margin-bottom: 0.6em;
+}
+
+.chat-list__item:last-of-type {
+  margin-bottom: 0;
 }
 
 .chat-list__item p {
@@ -121,7 +131,7 @@ body {
 }
 
 .chat-header {
-  border: 1px solid rgba(255, 125, 97, 0.86);
+  border-bottom: 1px solid rgba(255, 125, 97, 0.86);
   position: -webkit-sticky;
   position: sticky;
   z-index: 999;
@@ -149,6 +159,20 @@ body {
   font-weight: 500;
 }
 
+.chat-icon__users {
+  width: 42px;
+  cursor: pointer;
+  -webkit-filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+          filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+}
+
+.chat-icon__rooms {
+  width: 42px;
+  -webkit-filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+          filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
+  margin-right: 4px;
+}
+
 .nav-toggle {
   display: none;
 }
@@ -165,56 +189,34 @@ body {
   transition: opacity 150ms ease-in-out 150ms;
 }
 
-.chat-icon__users {
-  width: 42px;
-  cursor: pointer;
-  -webkit-filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
-          filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
-}
-
-.chat-icon__rooms {
-  width: 42px;
-  -webkit-filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
-          filter: invert(55%) sepia(0%) saturate(83%) hue-rotate(170deg) brightness(52%) contrast(92%);
-  margin-right: 4px;
-}
-
-.chat-header__room-info {
-  background-color: #ccc;
-}
-
 nav {
   position: absolute;
+  padding-left: 20px;
+  -webkit-padding-after: 50px;
+          padding-block-end: 50px;
+  left: -100%;
   text-align: left;
   width: 100%;
   max-height: 100vh;
-  top: 100%;
-  left: -110%;
   background: white;
   overflow-x: hidden;
-  overflow-y: scroll;
-  padding: 20px;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: 0px 10px 6px -7px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 6px -7px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
-  margin: 0;
+  margin-bottom: 0;
   padding: 0;
   list-style: none;
 }
 
 nav li {
-  margin-bottom: 5px;
-  padding-left: 0.3em;
-  height: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 7px;
 }
 
 nav li:hover {
