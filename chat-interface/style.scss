@@ -195,7 +195,6 @@ body {
     display: none;
     // note: ~ is looking for a sibling.
     &:checked ~ .chat-header__nav--left {
-      // transform: scale(0.5, 0.5);
       transform: scale(1, 1);
       left: 0;
 
@@ -205,4 +204,9 @@ body {
       }
     }
   }
+}
+
+// helper classes
+.text-dark {
+	color: #4D4D4D;
 }

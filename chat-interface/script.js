@@ -298,7 +298,7 @@ function displayChatHeaderNav(room) {
 
 	const displayRoomInfo = (room) => {
 		return `
-			<div class=${metaData.cssClasses.headerItem}>
+			<div class="${metaData.cssClasses.headerItem} text-dark">
 				<span>Room:</span>
 				<span>${room}</span>
       </div>
