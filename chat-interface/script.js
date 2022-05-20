@@ -179,8 +179,6 @@ const messages = [
 		"room": "lobby"
 	}
 ]
-
-const userCleanArr = users.map(e => e.username)
 const chatHeaderContainer = document.querySelector(".chat-header")
 const chatMessagesContainer = document.querySelector(".chat-messages")
 const chatInputContainer = document.querySelector(".chat-input")
@@ -193,7 +191,6 @@ displayChatMessages(messages)
 
 const msgInputElement = document.querySelector("#msg-input")
 msgInputElement.addEventListener("keypress", (e) => handleMsgInputSend(e))
-
 
 function handleMsgInputSend(e) {
 	const inputText = msgInputElement.value
@@ -225,12 +222,13 @@ function displayChatMessages(messages) {
 			listUserStatusInactive: "chat-messages-list__user--inactive",
 		}
 	}
+	const usersInMessages = users.map(e => e.username)
 
 	const list = document.createElement("ul")
 	list.className = metaData.cssClasses.list;
 
 	const messagesMap = messages.map(e => {
-		const isActiveStatus = userCleanArr.includes(e.user)
+		const isActiveStatus = usersInMessages.includes(e.user)
 		const statusClass = isActiveStatus ? metaData.cssClasses.listUserStatusActive : metaData.cssClasses.listUserStatusInactive
 		const { date, user, message } = e
 		return `
@@ -306,7 +304,6 @@ function displayChatHeaderNav(room) {
 	}
 
 	const displayRoomsNav = () => {
-		//TODO everything
 		return `
 			<div class=${metaData.cssClasses.headerItem}>
 				<img
