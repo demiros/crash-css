@@ -21,4 +21,8 @@ Fun coding of html table from the bootstrap official doc. I wanted to check if t
 
 Demo: [https://crash-css.onrender.com/bootstrap-like-table/index.html](https://crash-css.onrender.com/bootstrap-like-table/index.html)
 <br><br>
+## chat-interface
+CSS(with SASS) chat interface. It should be implemented to a Chess app, still not published.
+
+Demo: [https://crash-css.onrender.com/chat-interface/index.html](https://crash-css.onrender.com/chat-interface/index.html)
 
