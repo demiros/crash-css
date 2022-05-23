@@ -25,4 +25,3 @@ Demo: [https://crash-css.onrender.com/bootstrap-like-table/index.html](https://c
 CSS(with SASS) chat interface. It should be implemented to a Chess app, still not published.
 
 Demo: [https://crash-css.onrender.com/chat-interface/index.html](https://crash-css.onrender.com/chat-interface/index.html)
-
